@@ -24,11 +24,6 @@ internals.styles = {
   },
   content: {
     maxWidth: "50vw"
-  },
-  scroll: {
-    color: "white",
-    position: "relative",
-    top: "15vh"
   }
 };
 
@@ -37,7 +32,14 @@ class Hero extends Component {
     return (
       <Jumbotron style={internals.styles.hero} id="home">
         <div>
-          <h1 style={internals.styles.h1}>{heroObj.title}</h1>
+          <h1
+            style={{
+              position: "relative",
+              top: "-41vh"
+            }}
+          >
+            {heroObj.title}
+          </h1>
           <Nav.Link style={{ color: "white" }} href="#about">
             <IconContext.Provider
               value={{
@@ -46,7 +48,12 @@ class Hero extends Component {
                 className: "global-class-name"
               }}
             >
-              <div>
+              <div
+                style={{
+                  position: "relative",
+                  top: "17vh"
+                }}
+              >
                 <FaChevronCircleDown />
               </div>
             </IconContext.Provider>

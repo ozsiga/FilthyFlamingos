@@ -23,7 +23,7 @@ const navObj = {
 class Navigation extends Component {
   render() {
     return (
-      <Navbar style={navObj.navBarStyle} fixed="top">
+      <Navbar expand="lg" style={navObj.navBarStyle} sticky="top" id="nav">
         <Container>
           <Navbar.Brand className="bungee">
             <Nav.Link id="top" href="#home" style={navObj.brandStyle}>
@@ -32,7 +32,7 @@ class Navigation extends Component {
           </Navbar.Brand>
           <Navbar.Toggle />
         </Container>
-        <Navbar.Collapse>
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={navObj.navStyle}>
             <Nav.Link style={navObj.navStyle} href="#about">
               ABOUT
