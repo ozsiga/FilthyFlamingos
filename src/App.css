@@ -1,33 +1,181 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade|Source+Sans+Pro");
+@import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Source Sans Pro", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url("./images/F11.jpg") no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.bungee {
+  font-family: "Bungee Shade", cursive;
+  color: #fff;
+}
+.scrolldown a {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -29px;
+  color: #fff;
+  display: block;
+  height: 42px;
+  width: 42px;
+  font-size: 42px;
+  line-height: 42px;
+  color: #fff;
+  border-radius: 100%;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.scrolldown a:hover {
+  color: #11abb0;
+}
+h1 {
+  font-family: "Bungee Shade", cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main > .container {
+  padding-top: 5rem;
 }
 
-@keyframes App-logo-spin {
+@keyframes bounce {
   from {
-    transform: rotate(0deg);
+    transform: translateY(0px);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(-20px);
   }
+}
+
+.bounce {
+  animation: bounce 1.2s ease 0s infinite alternate;
+}
+nav.Link {
+  color: aliceblue;
+}
+.image-gallery-swipe {
+  justify-content: center;
+}
+
+.image-gallery-slides img {
+  justify-content: center;
+  height: 400px;
+  max-height: 80vh;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center center;
+}
+
+.fullscreen .image-gallery-slides img {
+  max-height: 100vh;
+}
+#contact {
+  margin: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 96px;
+  padding-bottom: 102px;
+  color: black;
+  justify-content: center;
+}
+#contact .section-head {
+  margin-bottom: 42px;
+}
+
+#contact a,
+#contact a:visited {
+  color: #11abb0;
+}
+#contact h1 {
+  font: 18px/24px "opensans-bold", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 50px;
+  letter-spacing: 3px;
+  color: #ebeeee;
+  margin-bottom: 6px;
+}
+
+/* contact form */
+#contact form {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+#contact label {
+  font: 15px/24px "opensans-bold", sans-serif;
+  color: #ebeeee;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  width: 26%;
+}
+#contact input,
+#contact textarea,
+#contact select {
+  padding: 18px 20px;
+  color: #eee;
+  background: #373233;
+  margin-bottom: 42px;
+  border: 0;
+  outline: none;
+  font-size: 15px;
+  line-height: 24px;
+  width: 65%;
+}
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+  color: #fff;
+  background-color: #11abb0;
+}
+#contact button.submit {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+  background: #0d0d0d;
+  border: none;
+  cursor: pointer;
+  height: auto;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 26%;
+}
+#contact button.submit:hover {
+  color: #0d0d0d;
+  background: #fff;
 }
