@@ -19,10 +19,6 @@ class ImageGrid extends Component {
         thumbnail: require("../images/Filthy2.jpg")
       },
       {
-        original: require("../images/ffffff.jpg"),
-        thumbnail: require("../images/ffffff.jpg")
-      },
-      {
         original: require("../images/Filthy4.jpg"),
         thumbnail: require("../images/Filthy4.jpg")
       },
